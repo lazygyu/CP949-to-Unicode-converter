@@ -17325,7 +17325,7 @@ function cp949_convert(str){
 	for(i = 0;i<len;i++){
 		ch = str.charCodeAt(i).toString(16);
 		if(hexTable[ch]){
-			res += String.fromCharCode(hexTable[ch]);
+			res += String.fromCharCode(parseInt(hexTable[ch], 16));
 		}else{
 			res += str.charAt(i);
 		}
